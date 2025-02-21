@@ -15,44 +15,85 @@
       href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" />
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   </head>
-  <body>
-    <section id="games">
-      <ul class="game-list">
-        <li>
-          <div class="game-card">
-            <a href="games/busca-minas.html">
-              <img src="/img/buscaminas.png" alt="Busca Minas">
-              <h3>Busca Minas</h3>
-            </a>
+  <body translate="no">
+    <div class="container">
+      <div style="display: flex; flex-direction: column;">
+        <div class="arcade-machine">
+          <div class="shadow"></div>
+          <div class="top">
+            <div class="stripes"></div>
           </div>
-        </li>
-        <li>
-          <div class="game-card">
-            <a href="games/dinosaur.html">
-              <img src="/img/dinosaur.png" alt="Dinosaur Game">
-              <h3>Dinosaur Game</h3>
-            </a>
+          <div class="screen-container">
+            <div class="shadow"></div>
+            <div class="screen">
+              <div class="screen-display"></div>
+              <div class="alien-container">
+                <div class="alien">
+                  <div class="ear ear-left"></div>
+                  <div class="ear ear-right"></div>
+                  <div class="head-top"></div>
+                  <div class="head">
+                    <div class="eye eye-left"></div>
+                    <div class="eye eye-right"></div>
+                  </div>
+                  <div class="body"></div>
+                  <div class="arm arm-left"></div>
+                  <div class="arm arm-right"></div>
+                </div>
+              </div>
+            </div>
+            <div class="joystick">
+              <div class="stick"></div>
+            </div>
           </div>
-        </li>
-        <li>
-          <div class="game-card">
-            <a href="games/flappy-bird.html">
-              <img src="/img/flappybird.png" alt="Flappy Bird">
-              <h3>Flappy Bird</h3>
-            </a>
+          <div class="board">
+            <div class="button button-a"></div>
+            <div class="button button-b"></div>
+            <div class="button button-c"></div>
           </div>
-        </li>
-        <li>
-          <div class="game-card">
-            <a href="games/snake.html">
-              <img src="/img/snake.png" alt="Snake Game">
-              <h3>Snake Game</h3>
-            </a>
+          <div class="bottom">
+            <div class="stripes"></div>
           </div>
-        </li>
-      </ul>
-    </section>
-    <script src="js/site.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+          <div class="base">
+          </div>
+        </div>
+        <div id="games">
+          <ul class="game-list">
+            <li>
+              <div class="game-card">
+                <a href="games/busca-minas.html">
+                  <img src="/img/buscaminas.png" alt="Busca Minas">
+                  <h3>Busca Minas</h3>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="game-card">
+                <a href="games/dinosaur.html">
+                  <img src="/img/dinosaur.png" alt="Dinosaur Game">
+                  <h3>Dinosaur Game</h3>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="game-card">
+                <a href="games/flappy-bird.html">
+                  <img src="/img/flappybird.png" alt="Flappy Bird">
+                  <h3>Flappy Bird</h3>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="game-card">
+                <a href="games/snake.html">
+                  <img src="/img/snake.png" alt="Snake Game">
+                  <h3>Snake Game</h3>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
