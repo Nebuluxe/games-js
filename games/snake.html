@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake Game</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background: linear-gradient(to bottom right, #222, #444);
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+    h1 {
+      font-size: 36px;
+      margin: 10px 0;
+      color: #FFF;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    canvas {
+      border: 3px solid #fff;
+      border-radius: 10px;
+      background-color: #333;
+    }
+    .score {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    #gameOverText {
+      font-size: 30px;
+      color: red;
+      display: none;
+      margin-top: 10px;
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+    #resetButton {
+      display: none;
+      margin-top: 15px;
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+      background-color: #444;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    #resetButton:hover {
+      background-color: #666;
+    }
+  </style>
+</head>
+<body>
+  <h1>Snake JS</h1>
+  <div class="score">Score: <span id="score">0</span></div>
+  <canvas id="gameCanvas" width="400" height="400"></canvas>
+  <div id="gameOverText">Game Over</div>
+  <button id="resetButton" onclick="resetGame()">Reiniciar Juego</button>
+
+  <!-- Archivos de sonido -->
+  <audio id="eatSound" src="eat.mp3"></audio>
+  <audio id="gameOverSound" src="game-over.mp3"></audio>
+  
+  <script src="/js/snake.js "></script>
+</body>
+</html>

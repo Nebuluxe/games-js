@@ -1,0 +1,49 @@
+
+  .game-list {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap; /* Permite que las cartas se ajusten a varias filas */
+  }
+  
+  .game-list li {
+	margin: 10px; /* Espacio entre cartas */
+  }
+  
+  .game-card {
+	width: 90px;
+	border-radius: 5px;
+	overflow: hidden;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-direction: column;
+	background: #9492921c;
+  }
+  
+  .game-card a {
+	display: block;
+	text-decoration: none;
+	color: #e6e6e6;
+  }
+  
+  .game-card img {
+	width: 55px;
+	height: 55px;
+	object-fit: cover; 
+	margin: 16px 10px 0px 16px;
+  }
+  
+  .game-card h3 {
+	padding: 10px;
+	margin: 0;
+	text-align: center;
+	font-size: 16px;
+  }
+
+  #me{
+	display: flex;
+  }
+  
+  .modal-eastereg.hide{
+	display: none;
+  }
