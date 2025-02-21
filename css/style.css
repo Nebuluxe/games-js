@@ -482,3 +482,91 @@ right: -5.9%;
   #games{
 	margin-top: 50px;
   }
+
+  footer{
+	margin-bottom: 10px;
+	margin-top: 50px;
+  }
+
+  footer p{
+	float: left;
+	margin-top: 35px;
+  }
+
+  
+.wrapper {
+	width: fit-content;
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	padding: 26px;
+	right: -30px;
+	position: relative;
+	float: right;
+}
+.catContainer {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.catbody {
+  width: 50px;
+}
+.tail {
+	position: absolute;
+	width: 8px;
+	top: 65%;
+	animation: tail 1.5s ease-in infinite alternate-reverse;
+	transform-origin: top;
+}
+@keyframes tail {
+  0% {
+    transform: rotateZ(60deg);
+  }
+  50% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(-20deg);
+  }
+}
+.wall {
+  width: 300px;
+}
+.text {
+	display: flex;
+	flex-direction: column;
+	width: 50px;
+	position: absolute;
+	margin: 0px 0px 80px 95px;
+}
+.zzz {
+  color: white;
+  font-weight: 700;
+  font-size: 15px;
+  animation: zzz 2s linear infinite;
+}
+.bigzzz {
+  color: white;
+  font-weight: 700;
+  font-size: 25px;
+  margin-left: 10px;
+  animation: zzz 2.3s linear infinite;
+}
+@keyframes zzz {
+  0% {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+  100% {
+    color: transparent;
+  }
+}
