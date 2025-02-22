@@ -465,7 +465,7 @@ right: -5.9%;
 	width: 55px;
 	height: 55px;
 	object-fit: cover; 
-	margin: 16px 10px 0px 16px;
+	margin: 16px 16px 0px 16px;
   }
   
   .game-card h3 {
@@ -481,7 +481,8 @@ right: -5.9%;
 	align-items: center;
 	align-content: center;
 	margin-top: 70px;
-  }
+  min-height: 500px;
+}
 
   #games{
 	margin-top: 30px;
@@ -489,7 +490,12 @@ right: -5.9%;
 
   footer{
 	margin-bottom: 10px;
-	margin-top: 50px;
+	margin-top: 150px;
+  }
+
+  footer .container{
+    min-height: 250px;
+    margin-top: 0;
   }
 
   footer p a {
@@ -607,4 +613,128 @@ right: -5.9%;
   position: absolute;
   bottom: 10px;
   left: 20px;
+}
+
+#view-games{
+  position: relative;
+  bottom: -60px;
+  left: -10px;
+  font-family: 'Press Start 2P', cursive !important;
+  color: white;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+#games{
+  display: none;
+}
+
+#carrousel{
+  display: none;
+}
+
+.head-carrousel{
+  z-index: 999;
+  position: relative;
+  padding-top: 15px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+#home{
+  float: left;
+  background-color: #ccc;
+  border: none;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#list-games{
+  float: right;
+  background-color: #ccc;
+  border: none;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.game-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  width: 100px; /* Cambiado a auto o un ancho mayor */
+  position: relative;
+  left: 10px;
+  bottom: -12px;
+  overflow: hidden; /* Se comenta esta linea */
+}
+
+.game-carousel .game-card {
+  flex: 0 0 auto;
+  width: 100px;
+  margin-right: 0px;
+  scroll-snap-align: start;
+  background: transparent;
+  box-shadow: none;
+}
+
+/* Estilos para los indicadores visuales */
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  border: none;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.carousel-indicators button.active {
+  background-color: #333;
+}
+
+/* Estilos para los botones de control */
+.carousel-control {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-control.prev {
+  position: absolute;
+  top: 60%;
+  left: 20px;
+  transform: translateY(-50%);
+}
+
+.carousel-control.next {
+  position: absolute;
+  top: 60%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.carousel-control.disabled {
+  opacity: 0.5;
+  cursor: default;
 }

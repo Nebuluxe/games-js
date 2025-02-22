@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/tetris.css" />
+</head>
+<body>
+    <div id="start-screen">
+        <h1>Tetris</h1>
+        <p>Flechas izquierda/derecha: Mover</p>
+        <p>Flecha abajo: Caída rápida</p>
+        <p>Z: Rotar antihorario</p>
+        <p>X: Rotar horario</p>
+        <button id="start-button">Iniciar Juego</button>
+    </div>
+    <div id="game-container" style="display: none;">
+        <canvas id="tetris" width="240" height="400"></canvas>
+        <div id="ui">
+            <div>Score: <span id="score">0</span></div>
+            <div>Level: <span id="level">1</span></div>
+            <canvas id="next-piece"></canvas>
+        </div>
+    </div>
+    <script src="js/tetris.js"></script>
+</body>
+</html>
