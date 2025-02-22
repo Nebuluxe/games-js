@@ -159,13 +159,13 @@ function animate() {
 
   // Dibujar puntuación
   ctx.fillStyle = "white";
-  ctx.font = "20px 'Press Start 2P', cursive";
+  ctx.font = "10px 'Press Start 2P', cursive";
   ctx.fillText(`Puntuación: ${score}`, 10, 30);
 
   const highScore = parseInt(localStorage.getItem("highScoreFlappyBird")) || 0;
 
   ctx.fillStyle = "white";
-  ctx.font = "20px 'Press Start 2P', cursive";
+  ctx.font = "10px 'Press Start 2P', cursive";
   ctx.textAlign = "right"; // Alineación a la derecha
   ctx.fillText(`Record: ${highScore}`, canvas.width - 10, 30); // Ajustar coordenadas x e y
   ctx.textAlign = "left"; // Restaurar la alineación predeterminada
