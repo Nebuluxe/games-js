@@ -1,13 +1,28 @@
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 const scoreDisplay = document.getElementById("score");
-const gameOverText = document.getElementById("gameOverText");
-const resetButton = document.getElementById("resetButton");
-const eatSound = document.getElementById("eatSound");
-const gameOverSound = document.getElementById("gameOverSound");
+const gameOverDiv = document.getElementById("game-over");
+const gameDiv = document.getElementById("game");
+const startGameDiv = document.getElementById("start-game");
 
 const boxSize = 20;
 let snake, direction, food, score, gameOver, foodSizeFactor, speed;
+
+document.getElementById("upButton").addEventListener("click", () => {
+  if (direction !== "DOWN") direction = "UP";
+});
+
+document.getElementById("downButton").addEventListener("click", () => {
+  if (direction !== "UP") direction = "DOWN";
+});
+
+document.getElementById("leftButton").addEventListener("click", () => {
+  if (direction !== "RIGHT") direction = "LEFT";
+});
+
+document.getElementById("rightButton").addEventListener("click", () => {
+  if (direction !== "LEFT") direction = "RIGHT";
+});
 
 // Inicializar el juego
 function init() {
@@ -19,9 +34,7 @@ function init() {
   foodSizeFactor = 1.0;
   speed = 100;
   scoreDisplay.textContent = score;
-  gameOverText.style.display = "none";
-  gameOverText.style.opacity = 0;
-  resetButton.style.display = "none";
+  gameOverDiv.classList.add("hide");
   gameLoop();
 }
 
@@ -80,7 +93,6 @@ function moveSnake() {
   if (head.x === food.x && head.y === food.y) {
     score++;
     scoreDisplay.textContent = score;
-    eatSound.play();
     food = getRandomFoodPosition();
     speed = Math.max(50, speed - 5); // Aumentar dificultad
   } else {
@@ -99,10 +111,8 @@ document.addEventListener("keydown", event => {
 // Función para terminar el juego
 function endGame() {
   gameOver = true;
-  gameOverSound.play();
-  gameOverText.style.display = "block";
-  resetButton.style.display = "block";
-  setTimeout(() => gameOverText.style.opacity = 1, 10); // Animación de "Game Over"
+  gameOverDiv.classList.remove("hide");
+  gameDiv.classList.add("hide");
 }
 
 // Animación de la comida (efecto de "latido")
@@ -125,8 +135,13 @@ function gameLoop() {
 
 // Reiniciar el juego
 function resetGame() {
+  gameDiv.classList.remove("hide");
+
   init();
 }
 
-// Iniciar el juego por primera vez
-init();
+function startGame() {
+  startGameDiv.classList.add("hide");
+  gameDiv.classList.remove("hide");
+  init();
+}

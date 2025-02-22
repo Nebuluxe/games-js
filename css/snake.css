@@ -6,7 +6,7 @@ body {
     height: 100vh;
     margin: 0;
     background: linear-gradient(to bottom right, #222, #444);
-    font-family: Arial, sans-serif;
+    font-family: 'Press Start 2P', cursive !important;
     color: white;
   }
   h1 {
@@ -24,16 +24,15 @@ body {
     font-size: 20px;
     margin-bottom: 20px;
   }
+
   #gameOverText {
     font-size: 30px;
     color: red;
-    display: none;
     margin-top: 10px;
     opacity: 0;
     transition: opacity 0.5s;
   }
   #resetButton {
-    display: none;
     margin-top: 15px;
     padding: 10px 20px;
     font-size: 18px;
@@ -46,3 +45,107 @@ body {
   #resetButton:hover {
     background-color: #666;
   }
+  #dpad {
+    margin-top: 20px;
+  }
+
+.dpad-button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: #b3b3b3;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dpad-up {
+    margin-left: 50px;
+    margin-bottom: 10px;
+}
+
+.dpad-down {
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+.dpad-left {
+    margin-right: 30px;
+}
+
+.dpad-right {
+    margin-left: 30px;
+}
+
+.dpad-horizontal {
+    display: flex;
+    width: 150px;
+}
+
+.hide{
+  display: none !important;
+}
+
+#start-game {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#start-game button {
+    font-size: 15px;
+    padding: 10px 20px;
+    background-color: #008CBA; /* Un color azul */
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 30px;
+    font-family: 'Press Start 2P', cursive !important;
+}
+
+#start-game button:hover {
+    background-color: #0077A2; /* Un azul más oscuro al pasar el ratón */
+}
+
+#game-over {
+  position: fixed;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#game-over button {
+    font-size: 15px;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Un color verde */
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    font-family: 'Press Start 2P', cursive !important;
+}
+
+#game-over button:hover {
+    background-color: #3e8e41; /* Un verde más oscuro al pasar el ratón */
+}
+
+#game {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}

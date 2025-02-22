@@ -128,7 +128,7 @@ document.addEventListener("keydown", event => {
     if (gameOver) resetGame();
     gameLoop();
   }
-});
+}); 
 
 // Iniciar el juego
 gameLoop();

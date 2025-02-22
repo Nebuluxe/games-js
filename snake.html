@@ -4,18 +4,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Snake Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/snake.css" />
 </head>
 <body>
-  <h1>Snake JS</h1>
-  <div class="score">Score: <span id="score">0</span></div>
-  <canvas id="gameCanvas" width="400" height="400"></canvas>
-  <div id="gameOverText">Game Over</div>
-  <button id="resetButton" onclick="resetGame()">Reiniciar Juego</button>
-
-  <!-- Archivos de sonido -->
-  <audio id="eatSound" src="eat.mp3"></audio>
-  <audio id="gameOverSound" src="game-over.mp3"></audio>
+  <div id="game" class="hide">
+    <div class="score">Puntaje: <span id="score">0</span></div>
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+    <div id="dpad">
+      <button id="upButton" class="dpad-button dpad-up">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="20" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708z"/>
+        </svg>
+      </button>
+      <div class="dpad-horizontal">
+          <button id="leftButton" class="dpad-button dpad-left">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="20" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+            </svg>
+          </button>
+          <button id="rightButton" class="dpad-button dpad-right">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+            </svg>
+          </button>
+      </div>
+      <button id="downButton" class="dpad-button dpad-down">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="20" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div id="game-over" class="hide">
+    <h2>Game Over</h2>
+    <button id="resetButton" onclick="resetGame()">Reiniciar Juego</button>
+  </div>
+  <div id="start-game">
+    <h2><img src="img/snake.png" alt="" width="50px"> Snake JS</h2>
+    <button id="resetButton" onclick="startGame()">Iniciar</button>
+  </div>
   
   <script src="js/snake.js "></script>
 </body>

@@ -5,7 +5,7 @@ body {
     height: 100vh;
     margin: 0;
     background: linear-gradient(to bottom, #87CEEB, #f7f7f7); /* Cielo a desierto */
-    font-family: Arial, sans-serif;
+    font-family: 'Press Start 2P', cursive !important;
   }
   #gameCanvas {
     border: 2px solid #555;

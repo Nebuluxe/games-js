@@ -1,7 +1,7 @@
 
-@import url("https://fonts.googleapis.com/css?family=Orbitron|Quicksand:500");
 body {
 	background-image: repeating-linear-gradient(0deg, #1a242f, #1a242f 15px, #283440 15px, #283440 16px);
+  font-family: 'Press Start 2P', cursive !important;
 }
 
 .arcade-machine {
@@ -434,7 +434,9 @@ right: -5.9%;
 	flex-wrap: wrap; 
 	z-index: 9999;
 	position: relative;
-  }
+  align-items: center;
+  justify-content: center;
+}
   
   .game-list li {
 	margin: 10px; /* Espacio entre cartas */

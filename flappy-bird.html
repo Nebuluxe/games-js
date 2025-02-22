@@ -4,9 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Flappy Bird en JavaScript</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/flappy-bird.css" />
 </head>
 <body>
+  <div id="game-over" class="hide">
+    <div>
+      <img src="img/Game_Over.png" alt="" width="250px">
+      <p>Tu puntuación: <span id="finalScore"></span></p>
+      <button onclick="restartGame()">Volver a jugar</button>
+    </div>
+  </div>
+  <div id="start-game">
+    <div>
+      <img src="img/Flappy_Logo.png" alt="" width="250px">
+      <p>Haz clic o toca para saltar</p>
+      <button onclick="startGameBtn()">Iniciar</button>
+    </div>
+  </div>
   <canvas id="gameCanvas" width="320" height="480"></canvas>
   <script src="js/flappy-bird.js"></script>
 </body>
