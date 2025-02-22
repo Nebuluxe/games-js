@@ -17,16 +17,18 @@ body {
   position: absolute;
   top: 0%;
   left: 15%;
-  background: white;
+  background: #262926;
   border: 5px solid #4c4c4c;
   z-index: 3;
+  color: #c8c8c8;
+  text-align: center;
 }
 .arcade-machine .top:before, .arcade-machine .top:after {
   height: 100%;
   width: 4%;
   position: absolute;
   top: -9%;
-  background: white;
+  background: #202220;
   border: 5px solid #4c4c4c;
   content: " ";
 }
@@ -36,7 +38,7 @@ body {
 .arcade-machine .top:after {
   right: -6%;
 }
-.arcade-machine .stripes {
+/* .arcade-machine .stripes {
   height: 100%;
   width: 10%;
   position: absolute;
@@ -58,7 +60,7 @@ body {
 .arcade-machine .stripes:after {
   background: #07BEB8;
   right: -100%;
-}
+} */
 .arcade-machine > .shadow {
   height: 85%;
   width: 65%;
@@ -75,7 +77,7 @@ body {
   position: absolute;
   top: 15%;
   left: 19%;
-  background: #4b5b61;
+  background: #3e3d3d;
   border: 5px solid #4c4c4c;
   z-index: 1;
 }
@@ -84,7 +86,7 @@ body {
   width: 4%;
   position: absolute;
   top: -2%;
-  background: white;
+  background: #202220;
   content: " ";
   border: 5px solid #4c4c4c;
   z-index: 2;
@@ -175,7 +177,7 @@ body {
   position: absolute;
   top: 61%;
   left: 18.2%;
-  background: #4B5B61;
+  background: #3e3d3d;
   transform: rotateX(70deg);
 }
 .arcade-machine .board:before, .arcade-machine .board:after {
@@ -183,7 +185,7 @@ body {
   width: 4%;
   position: absolute;
   top: -2%;
-  background: white;
+  background: #202220;
   content: " ";
   border: 5px solid #4c4c4c;
   z-index: 2;
@@ -195,7 +197,7 @@ body {
   right: -6%;
 }
 .arcade-machine .board .button {
-  height: 15%;
+  height: 5px;
   width: 6%;
   position: absolute;
   top: 40%;
@@ -204,15 +206,15 @@ body {
   border: 5px solid #4c4c4c;
 }
 .arcade-machine .board .button-a {
-  background: #BFD3C1;
+  background: #c90f0f;
   left: 40%;
 }
 .arcade-machine .board .button-b {
-  background: #68A691;
+  background: #c90f0f;
   left: 55%;
 }
 .arcade-machine .board .button-c {
-  background: #07BEB8;
+  background: #c90f0f;
   left: 70%;
 }
 .arcade-machine .bottom {
@@ -221,7 +223,7 @@ body {
   position: absolute;
   top: 76%;
   left: 14.5%;
-  background: white;
+  background: #262926;
   border: 5px solid #4c4c4c;
 }
 .arcade-machine .bottom:before, .arcade-machine .bottom:after {
@@ -229,7 +231,7 @@ body {
   width: 4%;
   position: absolute;
   top: -9%;
-  background: white;
+  background: #202220;
   content: " ";
   border: 5px solid #4c4c4c;
   z-index: 2;
@@ -404,19 +406,20 @@ footer p a {
 .arcade-machine .base{
 	width: 248px;
 	height: 250px;
-	background-color: #ffffff;
+	background-color: #262926;
 	margin-left: 74px;
 	position: relative;
 	bottom: -85%;
 	z-index: -2;
+  padding-top: 50px;
 }
 
 .arcade-machine .base::before, .arcade-machine .base::after {
-	height: 105%;
+	height: 107%;
 	width: 4%;
 	position: absolute;
 	top: -9%;
-	background: white;
+	background: #202220;
 	content: " ";
 	border: 5px solid #4c4c4c;
 	z-index: 2;
@@ -456,7 +459,7 @@ right: -5.9%;
 	display: block;
 	text-decoration: none;
 	color: #cccccc;
-	font-family: "Courier New", monospace;
+  font-family: 'Press Start 2P', cursive !important;
   }
   
   .game-card img {
@@ -470,7 +473,7 @@ right: -5.9%;
 	padding: 10px;
 	margin: 0;
 	text-align: center;
-	font-size: 16px;
+	font-size: 8px;
   }
 
   .container{
@@ -482,7 +485,7 @@ right: -5.9%;
   }
 
   #games{
-	margin-top: 50px;
+	margin-top: 30px;
   }
 
   footer{
@@ -571,4 +574,34 @@ right: -5.9%;
   100% {
     color: transparent;
   }
+}
+.coin-collector {
+  width: 50px;
+  height: 80px;
+  background-color: #e0e0e0; /* Gris claro */
+  border: 1px solid #9e9e9e; /* Borde gris */
+  border-radius: 5px;
+  position: relative;
+  margin: 105px;
+  margin-top: 105px;
+  margin-top: 0;
+}
+
+.coin-slot {
+  width: 30px;
+  height: 20px;
+  background-color: #bdbdbd; /* Gris medio */
+  border-radius: 3px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.coin-reject-bar {
+  width: 10px;
+  height: 30px;
+  background-color: #616161; /* Gris oscuro */
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
 }

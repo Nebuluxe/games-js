@@ -1,6 +1,8 @@
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 const scoreDisplay = document.getElementById("score");
+const highScoreDisplay = document.getElementById("highScore");
+
 const gameOverDiv = document.getElementById("game-over");
 const gameDiv = document.getElementById("game");
 const startGameDiv = document.getElementById("start-game");
@@ -35,6 +37,11 @@ function init() {
   speed = 100;
   scoreDisplay.textContent = score;
   gameOverDiv.classList.add("hide");
+  
+  const highScore = parseInt(localStorage.getItem("highScoreSnake")) || 0;
+
+  highScoreDisplay.textContent = highScore;
+
   gameLoop();
 }
 
@@ -113,6 +120,14 @@ function endGame() {
   gameOver = true;
   gameOverDiv.classList.remove("hide");
   gameDiv.classList.add("hide");
+
+  const currentHighScore = parseInt(localStorage.getItem("highScoreSnake")) || 0;
+
+  // Verificar si la puntuación actual es mayor que la puntuación más alta
+  if (score > currentHighScore) {
+      // Almacenar la nueva puntuación más alta
+      localStorage.setItem("highScoreSnake", score.toString());
+  }
 }
 
 // Animación de la comida (efecto de "latido")

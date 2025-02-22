@@ -134,6 +134,14 @@ function animate() {
       document.getElementById("gameCanvas").style.display = "none"; 
       document.getElementById("game-over").classList.remove("hide"); // Mostrar el div
       document.getElementById("finalScore").textContent = score; // Mostrar la puntuación final
+
+      const currentHighScore = parseInt(localStorage.getItem("highScoreFlappyBird")) || 0;
+
+      // Verificar si la puntuación actual es mayor que la puntuación más alta
+      if (score > currentHighScore) {
+          // Almacenar la nueva puntuación más alta
+          localStorage.setItem("highScoreFlappyBird", score.toString());
+      }
       return;
     }
 
@@ -153,6 +161,14 @@ function animate() {
   ctx.fillStyle = "white";
   ctx.font = "20px 'Press Start 2P', cursive";
   ctx.fillText(`Puntuación: ${score}`, 10, 30);
+
+  const highScore = parseInt(localStorage.getItem("highScoreFlappyBird")) || 0;
+
+  ctx.fillStyle = "white";
+  ctx.font = "20px 'Press Start 2P', cursive";
+  ctx.textAlign = "right"; // Alineación a la derecha
+  ctx.fillText(`Record: ${highScore}`, canvas.width - 10, 30); // Ajustar coordenadas x e y
+  ctx.textAlign = "left"; // Restaurar la alineación predeterminada
 
   requestAnimationFrame(animate);
 }
