@@ -21,17 +21,17 @@ let gameOver = false;
 
 // Cargar imagen de fondo (opcional)
 const bgImage = new Image();
-bgImage.src = '/img/flappy_bird_background.png'; 
+bgImage.src = 'img/flappy_bird_background.png'; 
 
 // Cargar imagen del pájaro
 const birdImage = new Image();
-birdImage.src = "/img/bird.png";
+birdImage.src = "img/bird.png";
 
 const pipeTopImage = new Image();
-pipeTopImage.src = "/img/pipe_top.png"; 
+pipeTopImage.src = "img/pipe_top.png"; 
 
 const pipeBottomImage = new Image();
-pipeBottomImage.src = "/img/pipe_bottom.png";
+pipeBottomImage.src = "img/pipe_bottom.png";
 
 // Generar tubería cada cierto intervalo de tiempo
 function generatePipe() {
