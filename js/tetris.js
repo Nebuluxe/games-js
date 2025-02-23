@@ -242,3 +242,63 @@ function updateGame(time = performance.now()) { // Use performance.now() for acc
 
 drawNextPiece();
 updateGame();
+
+function simularKeyDown(tecla) {
+  let key, code, which, keyCode;
+
+  switch (tecla) {
+    case 'Up':
+      key = 'ArrowUp';
+      code = 'ArrowUp';
+      which = 38;
+      keyCode = 38;
+      break;
+    case 'Down':
+      key = 'ArrowDown';
+      code = 'ArrowDown';
+      which = 40;
+      keyCode = 40;
+      break;
+    case 'Left':
+      key = 'ArrowLeft';
+      code = 'ArrowLeft';
+      which = 37;
+      keyCode = 37;
+      break;
+    case 'Right':
+      key = 'ArrowRight';
+      code = 'ArrowRight';
+      which = 39;
+      keyCode = 39;
+      break;
+    case 'Z':
+      key = 'z';
+      code = 'KeyZ';
+      which = 90;
+      keyCode = 90;
+      break;
+    case 'X':
+      key = 'x';
+      code = 'KeyX';
+      which = 88;
+      keyCode = 88;
+      break;
+  }
+
+  const eventoKeyDown = new KeyboardEvent('keydown', {
+    key: key,
+    code: code,
+    which: which,
+    keyCode: keyCode,
+    bubbles: true,
+    cancelable: true,
+  });
+  document.dispatchEvent(eventoKeyDown);
+}
+
+document.getElementById('upButton').addEventListener('click', () => simularKeyDown('Up'));
+document.getElementById('downButton').addEventListener('click', () => simularKeyDown('Down'));
+document.getElementById('leftButton').addEventListener('click', () => simularKeyDown('Left'));
+document.getElementById('rightButton').addEventListener('click', () => simularKeyDown('Right'));
+document.getElementById('rotarIzquierda').addEventListener('click', () => simularKeyDown('Z'));
+document.getElementById('rotarDerecha').addEventListener('click', () => simularKeyDown('X'));

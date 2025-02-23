@@ -1,8 +1,3 @@
-/* Simple JavaScript Inheritance
- * By John Resig http://ejohn.org/
- * MIT Licensed.
- */
-// Inspired by base2 and Prototype
 (function(){
     var initializing = false, fnTest = /xyz/.test(function(){xyz;}) ? /\b_super\b/ : /.*/;
    
@@ -765,3 +760,43 @@
     init();
     animate();
   };
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("leftButton").style.display = "none";
+    document.getElementById("rightButton").style.display = "none";
+    document.getElementById("attackButton").style.display = "none";
+    document.getElementById("newGame").style.display = "block";
+});
+
+document.getElementById('leftButton').addEventListener('mousedown', () => {
+    keyStates[37] = true;
+});
+
+document.getElementById('leftButton').addEventListener('mouseup', () => {
+    keyStates[37] = false;
+});
+
+document.getElementById('rightButton').addEventListener('mousedown', () => {
+    keyStates[39] = true;
+});
+
+document.getElementById('rightButton').addEventListener('mouseup', () => {
+    keyStates[39] = false;
+});
+
+document.getElementById('attackButton').addEventListener('mousedown', () => {
+    keyStates[88] = true;
+});
+
+document.getElementById('attackButton').addEventListener('mouseup', () => {
+    keyStates[88] = false;
+});
+
+document.getElementById('newGame').addEventListener('click', () => {
+    keyStates[13] = true;
+    prevKeyStates[13] = false; // Simular wasKeyPressed(13)
+    document.getElementById("newGame").style.display = "none";
+    document.getElementById("attackButton").style.display = "block";
+    document.getElementById("leftButton").style.display = "block";
+    document.getElementById("rightButton").style.display = "block";
+});

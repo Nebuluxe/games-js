@@ -12,6 +12,9 @@ body {
   width: 382px;
   border-radius: 5px;
   margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #shim {
@@ -30,10 +33,63 @@ body {
   width: 342px;
   margin: 0px auto;
   font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 a {
   text-decoration: none;
   color: #0000FF;
+}
+
+#dpad {
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  display: none;
+}
+@media (max-width: 768px) {
+  #dpad {
+    display: block; 
+  }
+}
+#mew-game{
+  margin-left: 20px;
+}
+
+.dpad-button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: #b3b3b3;
+  color: white;
+  font-size: 1.5em;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.dpad-up {
+  margin-left: 50px;
+  margin-bottom: 10px;
+}
+
+.dpad-down {
+  margin-left: 50px;
+  margin-top: 10px;
+}
+
+.dpad-left {
+  margin-right: 30px;
+}
+
+.dpad-right {
+  margin-left: 30px;
+}
+
+.dpad-horizontal {
+  display: flex;
+  width: 150px;
 }
 

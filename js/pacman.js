@@ -1270,3 +1270,76 @@ $(function(){
       "(firefox 3.6+, Chrome 4+, Opera 10+ and Safari 4+)</small>";
   }
 });
+
+
+function simularKeyDown(tecla) {
+    let key, code, which, keyCode;
+  
+    switch (tecla) {
+      case 'Up':
+        key = 'ArrowUp';
+        code = 'ArrowUp';
+        which = 38;
+        keyCode = 38;
+        break;
+      case 'Down':
+        key = 'ArrowDown';
+        code = 'ArrowDown';
+        which = 40;
+        keyCode = 40;
+        break;
+      case 'Left':
+        key = 'ArrowLeft';
+        code = 'ArrowLeft';
+        which = 37;
+        keyCode = 37;
+        break;
+      case 'Right':
+        key = 'ArrowRight';
+        code = 'ArrowRight';
+        which = 39;
+        keyCode = 39;
+        break;
+      case 'N':
+        key = 'n';
+        code = 'KeyN';
+        which = 78;
+        keyCode = 78;
+        break;
+        
+    }
+  
+    const eventoKeyDown = new KeyboardEvent('keydown', {
+      key: key,
+      code: code,
+      which: which,
+      keyCode: keyCode,
+      bubbles: true,
+      cancelable: true,
+    });
+    document.dispatchEvent(eventoKeyDown);
+  }
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("leftButton").style.display = "none";
+    document.getElementById("rightButton").style.display = "none";
+    document.getElementById("upButton").style.display = "none";
+    document.getElementById("downButton").style.display = "none";
+    document.getElementById("newGame").style.display = "block";
+});
+
+  document.getElementById('upButton').addEventListener('click', () => simularKeyDown('Up'));
+  document.getElementById('downButton').addEventListener('click', () => simularKeyDown('Down'));
+  document.getElementById('leftButton').addEventListener('click', () => simularKeyDown('Left'));
+  document.getElementById('rightButton').addEventListener('click', () => simularKeyDown('Right'));
+  document.getElementById('newGame').addEventListener('click', () => simularKeyDown('N'));
+
+  
+document.getElementById('newGame').addEventListener('click', () => {
+    simularKeyDown('N')
+    document.getElementById("leftButton").style.display = "block";
+    document.getElementById("rightButton").style.display = "block";
+    document.getElementById("upButton").style.display = "block";
+    document.getElementById("downButton").style.display = "block";
+    document.getElementById("newGame").style.display = "none";
+});
+
