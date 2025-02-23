@@ -405,7 +405,7 @@ footer h4 {
 .arcade-machine .base{
 	width: 248px;
 	height: 250px;
-	background-color: #1d221d;
+	background-color: #181B18;
 	margin-left: 74px;
 	position: relative;
 	bottom: -85%;
@@ -462,10 +462,11 @@ right: -5.9%;
   }
   
   .game-card img {
-	width: 55px;
-	height: 55px;
-	object-fit: cover; 
-	margin: 16px 16px 0px 16px;
+    width: 55px;
+    height: 55px;
+    object-fit: cover; 
+    margin: 16px 16px 0px 16px;
+    border-radius: 10px;
   }
   
   .game-card h3 {
@@ -618,7 +619,7 @@ right: -5.9%;
 #view-games{
   position: relative;
   bottom: -60px;
-  left: -10px;
+  left: -7px;
   font-family: 'Press Start 2P', cursive !important;
   color: white;
   background: none;
@@ -637,35 +638,29 @@ right: -5.9%;
 .head-carrousel{
   z-index: 999;
   position: relative;
-  padding-top: 15px;
-  padding-left: 6px;
-  padding-right: 6px;
+  padding-top: 3px;
 }
 
 #home{
   float: left;
-  background-color: #ccc;
-  border: none;
-  cursor: pointer;
   background: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
   padding: 5px;
   cursor: pointer;
   z-index: 10;
+  border-bottom-right-radius: 10px;
 }
 
 #list-games{
   float: right;
-  background-color: #ccc;
-  border: none;
-  cursor: pointer;
   background: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
   padding: 5px;
   cursor: pointer;
   z-index: 10;
+  border-bottom-left-radius: 10px;
 }
 
 .game-carousel {
@@ -675,7 +670,7 @@ right: -5.9%;
   scroll-behavior: smooth;
   width: 100px; /* Cambiado a auto o un ancho mayor */
   position: relative;
-  left: 10px;
+  left: 17px;
   bottom: -12px;
   overflow: hidden; /* Se comenta esta linea */
 }
@@ -722,16 +717,18 @@ right: -5.9%;
 
 .carousel-control.prev {
   position: absolute;
-  top: 60%;
-  left: 20px;
+  top: 85%;
+  left: 0;
   transform: translateY(-50%);
+  border-top-right-radius: 10px;
 }
 
 .carousel-control.next {
   position: absolute;
-  top: 60%;
-  right: 20px;
+  top: 85%;
+  right: 0;
   transform: translateY(-50%);
+  border-top-left-radius: 10px;
 }
 
 .carousel-control.disabled {
