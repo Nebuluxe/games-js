@@ -66,3 +66,51 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// Código que debe ir en el proyecto de Arcade (e.g., games-js/index.js o <script> tag)
+
+function applyStylesFromURL() {
+    // 1. Obtener la parte de la URL que contiene los parámetros
+    const params = new URLSearchParams(window.location.search);
+    
+    // 2. Obtener el parámetro 'style'
+    const styleParam = params.get('style');
+
+    if (styleParam) {
+        const decodedStyle = decodeURIComponent(styleParam); 
+
+        // 3. Evaluar el parámetro y aplicar los estilos
+        
+        // --- LÓGICA DE FONDO (Si mantienes el fondo) ---
+        if (decodedStyle.includes('bg:')) {
+            // Ejemplo: style=bg:#0d1117
+            const bgMatch = decodedStyle.match(/bg:([^;]+)/);
+            if (bgMatch && document.body) {
+                            console.log(bgMatch);
+
+                document.body.style.backgroundColor = bgMatch[1];
+                document.body.style.backgroundImage = "none";
+                
+                document.querySelector('.footer-content').style.display = 'none';
+            }
+        }
+        
+        // --- LÓGICA DE OVERFLOW (Nueva Lógica) ---
+        if (decodedStyle.includes('overflow:hidden')) {
+            // Aplicar overflow: hidden al HTML
+            document.documentElement.style.overflow = 'hidden'; 
+            
+            // Aplicar overflow: hidden al BODY
+            if (document.body) {
+                document.body.style.overflow = 'hidden'; 
+            }
+            
+            console.log('Overflow: hidden aplicado al <html> y al <body>.');
+        }
+
+        console.log(`Estilos aplicados desde URL: ${decodedStyle}`);
+    }
+}
+
+// Ejecutar la función tan pronto como el DOM del proyecto de Arcade esté listo
+document.addEventListener('DOMContentLoaded', applyStylesFromURL);
