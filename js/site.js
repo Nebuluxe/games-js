@@ -91,8 +91,9 @@ function applyStylesFromURL() {
                 document.body.style.backgroundColor = bgMatch[1];
                 document.body.style.backgroundImage = "none";
                 document.body.style.margin = '0px'; 
-                
+
                 document.querySelector('.footer-content').style.display = 'none';
+                document.querySelector('#list-games').style.display = 'none';
             }
         }
         
