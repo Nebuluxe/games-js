@@ -90,6 +90,7 @@ function applyStylesFromURL() {
 
                 document.body.style.backgroundColor = bgMatch[1];
                 document.body.style.backgroundImage = "none";
+                document.body.style.margin = '0px'; 
                 
                 document.querySelector('.footer-content').style.display = 'none';
             }
@@ -103,6 +104,7 @@ function applyStylesFromURL() {
             // Aplicar overflow: hidden al BODY
             if (document.body) {
                 document.body.style.overflow = 'hidden'; 
+                document.body.style.margin = '0px'; 
             }
             
             console.log('Overflow: hidden aplicado al <html> y al <body>.');
